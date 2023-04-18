@@ -5,6 +5,8 @@
     <title>Llistes alumnat i professorat</title>
 </head>
 <body>
+<a href="{% url 'students_list' %}">Alumnat</a>
+<a href="{% url 'teachers_list' %}">Professorat</a>
   {% block content %}
   {% endblock %}
 </body>
