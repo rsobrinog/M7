@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<h1>Informació de l'alumnat</h1>
+<ol>
+    {% for i in students %}
+    <il>Name: {{ i.name }}</il>
+    <il>Surname: {{ i.surname }}</il>
+    <il>Age: {{ i.age }}</il>
+    {% endfor %}
+</ol>
+{% endblock %}
