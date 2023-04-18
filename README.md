@@ -1,3 +1,2 @@
 # M7
-sdlvmñklsdf
-dafblmñadlfbmlñadfmblñadmbflñab
+Projecte de proves amb Django i Railway
