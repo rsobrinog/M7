@@ -14,4 +14,4 @@ teachers=[
 ]
 def teachers_list(request):
     context={'teachers':teachers}
-    render(request, 'teachers_list.html', context)
+    return render(request, 'teachers_list.html', context)
