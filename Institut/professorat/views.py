@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from .forms import TeacherForm
 
 teachers=[
     {
@@ -15,3 +16,8 @@ teachers=[
 def teachers_list(request):
     context={'teachers':teachers}
     return render(request, 'teachers_list.html', context)
+
+def teach_form(request):
+    form = TeacherForm()
+    context = {'form':form}
+    return render(request, 'form.html', context)

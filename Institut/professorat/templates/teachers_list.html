@@ -1,11 +1,11 @@
 {% extends 'index.html' %}
 {% block content %}
 <h1>Llista del professorat</h1>
-<ol>
+<ul>
     {% for i in teachers %}
     <li>Name: {{ i.name }}</li>
     <li>Surname: {{ i.surname }}</li>
     <li>Age: {{ i.age }}</li>
     {% endfor %}
-</ol>
+</ul>
 {% endblock %}
