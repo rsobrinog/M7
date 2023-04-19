@@ -21,7 +21,7 @@ def stu_form(request):
     context={'form':form}
     return render(request, 'form.html', context)
 
-def update(request,pk):
+def update_stu(request,pk):
     student = Alumnat.objects.get(id=pk)
     form = AlumnatForm(instance=student)
 
