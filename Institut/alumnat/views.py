@@ -3,19 +3,9 @@ from .forms import AlumnatForm
 from .models import Alumnat
 
 
-students = [
-    {
-        'id': 1,
-        'name': 'Roger',
-        'surname': 'Sobrino',
-    },
-    {
-        'id': 2,
-        'name': 'Oriol',
-        'surname': 'Roca',
-    }
-]
+
 def students_list(request):
+    students = Alumnat.objects.all().values()
     context = {'students':students}
     return render(request,'students_list.html', context)
 
