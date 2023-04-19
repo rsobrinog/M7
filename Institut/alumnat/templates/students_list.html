@@ -4,9 +4,10 @@
 <tbody>
     {% for i in students %}
     <tr>
-        <td>Name: {{ i.name }}</td>
-        <td>Surname: {{ i.surname }}</td>
-        <td>Age: {{ i.age }}</td>
+        <td>{{ i.id }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.surname }}</td>
+        <td>{{ i.age }}</td>
     </tr>
     {% endfor %}
 </tbody>
