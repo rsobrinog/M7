@@ -8,7 +8,8 @@
         <td>{{ i.name }}</td>
         <td>{{ i.surname }}</td>
         <td>{{ i.age }}</td>
-        <td><a href="{% url 'update' i.id %}">EDIT</a></td>
+        <td><a href="{% url 'update_stu' i.id %}">EDIT</a></td>
+        <td><a href="{% url 'del_stu' i.id %}">DELETE</a></td>
     </tr>
     {% endfor %}
 </tbody>
