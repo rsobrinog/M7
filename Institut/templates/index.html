@@ -7,7 +7,20 @@
 <body>
 <a href="{% url 'students_list' %}">Alumnat</a>
 <a href="{% url 'teachers_list' %}">Professorat</a>
+<table class="table">
+    <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Surname</th>
+      <th scope="col">Age</th>
+    </tr>
+    </thead>
   {% block content %}
   {% endblock %}
+</table>
+<a href="{% url 'stu_form' %}"> Afegir Alumnat</a>
+<a href="{% url 'teach_form' %}"> Afegir Professorat</a>
+
 </body>
 </html>

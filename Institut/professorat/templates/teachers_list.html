@@ -1,11 +1,16 @@
 {% extends 'index.html' %}
 {% block content %}
 <h1>Llista del professorat</h1>
-<ol>
+<tbody>
     {% for i in teachers %}
-    <li>Name: {{ i.name }}</li>
-    <li>Surname: {{ i.surname }}</li>
-    <li>Age: {{ i.age }}</li>
+    <tr>
+        <td>{{ i.id }}</td>
+        <td>{{ i.name }}</td>
+        <td>{{ i.surname }}</td>
+        <td>{{ i.age }}</td>
+        <td><a href="{% url 'update' i.id %}">EDIT</a></td>
+        <td><a href="{% url 'delete' i.id %}">DELETE</a></td>
+    </tr>
     {% endfor %}
-</ol>
+</tbody>
 {% endblock %}
