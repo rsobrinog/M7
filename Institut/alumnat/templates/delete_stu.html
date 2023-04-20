@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<h1>Actualització llista Estudiants</h1>
+
+<form action="" method="POST">
+    {% csrf_token %}
+    <p>Segur que vols <strong>ELIMINAR</strong> l'estudiant {{ student.name }}</p>
+    <button><a href="{% url 'students_list' %}">TORNAR</a></button>
+    <input type="submit" value="ELIMINAR">
+</form>
+{% endblock %}

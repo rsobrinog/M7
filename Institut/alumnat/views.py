@@ -33,3 +33,15 @@ def update_stu(request,pk):
 
     context = {'form':form}
     return render(request,'form.html',context)
+
+
+def del_stu(request, pk):
+    student = Alumnat.objects.get(id=pk)
+
+
+    if request.method == 'POST':
+        student.delete()
+        return redirect('students_list')
+
+    context = {'student':student}
+    return render(request,'delete_stu.html', context)
